@@ -35,10 +35,9 @@ function App() {
       }
 
       const data = await res.json();
-      console.log(data.reply) ;
 
       const newMessege1 = {
-        id: messeges.length + 1,
+        id: messeges.length + 2,
         label: data.reply,
         type: "ai"
       };
@@ -56,7 +55,7 @@ function App() {
     setValue(e.target.value);
   }
 
-  return (<div className={"bg-neutral-900"}>
+  return (<div>
       <div className="relative w-[60%] m-auto h-screen text-white p-4">
         <MessegeContent messeges={messeges}/>
         <InputForm handleEnter={handleEnter} value={value} handleChange={handleChange}/>
